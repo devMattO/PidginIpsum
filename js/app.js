@@ -1,28 +1,22 @@
 window.onload = function(){
 
-	var randomPidgin = ['If can, can. No can, no can. You dunno, no even…','Hey, braddah can you pass me the dakine?','Sh00ts braddah','Ho, no be lidat, braddah.','So what you like grind? We no moa da kine. No worries, brah, I grind any kine.','Ku`ulei get shmall kine cho cho lips yeah?','Ho, after pound three plate lunches I had a huge kanak-attack'];
+	var randomPidgin = ['If can, can. No can, no can. You dunno, no even…','Hey, braddah can you pass me the dakine?','Sh00ts braddah','Ho, no be lidat, braddah.','So what you like grind? We no moa da kine. No worries, brah, I grind any kine.','Ku`ulei get shmall kine cho cho lips yeah?','Ho, after pounding three plate lunches I got one huge kanak-attack!','Put ‘em away when you are pau.','Local people, dey get togeddah fo’ party, wedding, baby luau, whatevahs, dey gotta talk story, yeah? An’ how you can talk story wid’out pidgin? Cannot! Pidgin someting from da heart!'];
 
 	function displayRandomPidgin(){
-		for (var i = 0; i < 1; i++) {
 			var randomPidginPhrase = randomPidgin[Math.floor(Math.random()*randomPidgin.length)];
-			paraElement = document.createElement('p');
-			paraElement.id = 'words';
+			var paraElement = document.getElementById('words');
 			paraElement.innerHTML = randomPidginPhrase;
 			var paraHere = document.getElementById('paraHere');
 			paraHere.appendChild(paraElement);
-
-			console.log(randomPidginPhrase);
-		}
 	}
-
-	console.log(displayRandomPidgin());
-
 	
+	function button(){
+		var randomPidginButton = document.getElementById('createMoPidgin');
+		randomPidginButton.addEventListener('click',displayRandomPidgin);
+		paraHere.appendChild(randomPidginButton);
+	} //closes button function
 
-
-
-
-
+	button();
 
 
 };
